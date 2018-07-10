@@ -1,0 +1,116 @@
+/*
+
+	Header-links
+
+*/
+
+.header-links-list{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	list-style: none; 
+	width: 100%;
+}
+
+.header-links-list-itemList{
+	padding: 1em;
+	width: 100%;
+	text-align: center;
+}
+
+.header-links-list-itemList:nth-child(1){
+	padding-top: 2em;
+}
+
+.header-links-list-itemList:nth-last-child(1){
+	padding-bottom: 2em;
+}
+
+.header-links{
+	height: auto;
+	width: 100%;
+	display: flex;
+	position: fixed;
+	flex-direction: column;
+	z-index: 10;
+	top: 0;
+	background-color: rgba(14,14,14,0.9);
+	justify-content: center;	
+}
+
+.header-links::after{
+	content: "";
+	position: relative;
+	
+	background-color: rgba(14,14,14,0.6);
+	z-index: 1;
+	display: block;
+}
+
+.header-links-linksToggle{
+	background-image: url('../img/Icons/Arrow.svg');
+	width: 1em;
+	height: 1em;
+	background-size: 100%;
+	transform: rotate(180deg);
+	align-self: center;
+	margin: 0 0 1em 0;
+}
+
+
+/*
+
+	Header-links-item
+
+*/
+
+.profileItem::before{
+	content: "";
+	background-image: url('../img/Icons/Person.svg');
+}
+
+.curriculumItem::before{
+	content: "";	
+	background-image: url('../img/Icons/File.svg');
+}
+
+.projectsItem::before{
+	content: "";
+	background-image: url('../img/Icons/Project.svg');
+}
+
+.contactItem::before{
+	content: "";
+	background-image: url('../img/Icons/Mail.svg');
+}
+
+.languageItem::before{
+	content: "";
+	background-image: url('../img/Icons/Globe.svg');
+}
+
+.header-links-list-item{
+	text-decoration: none;
+	color: white;
+	font-size: 1em;
+	display: flex;
+	align-items: center;
+}
+
+.header-links-list-item::before{
+	content: "";
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 0.5em;
+	background-size: 50%;
+	background-color: white;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	margin: 0 2em 0 1em; 
+}
+
+
+
+.header-linksToggle{
+	background-image: url("../img/icons/Arrow.svg");
+}

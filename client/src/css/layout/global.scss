@@ -1,3 +1,11 @@
 body{
 	font-family: "Roboto",sans-serif;
 }
+
+.flex{
+	display: flex;
+}
+
+.rotate180{
+	transform: rotate(180deg);
+}

@@ -1,5 +1,8 @@
 import {openMenu} from './features/menu.js';
 
-$(".header-links-linksToggle").click(() => {
+const menuButton = $(".header-links-linksToggle");
+
+$(".header-links").click(() => {
 	openMenu._toggleMenu();
+	menuButton.toggleClass('rotate180');
 });

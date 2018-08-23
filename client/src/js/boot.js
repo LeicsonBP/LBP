@@ -1,4 +1,5 @@
-import {jQuery} from 'base/jQuery.js';
-import {menu} from 'features/menu.js';
+import {openMenu} from './features/menu.js';
 
-$(".header-links-linksToggle").click(menu._toggleMenu);
+$(".header-links-linksToggle").click(() => {
+	openMenu._toggleMenu();
+});

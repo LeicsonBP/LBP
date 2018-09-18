@@ -1,0 +1,61 @@
+/*
+
+    Essentials of mixins
+
+        //Creation of placeholder border-radius
+        @mixin border-radius($radius: 0.3em){
+          -webkit-border-radius: $radius;
+          -moz-border-radius: $radius;
+          -o-border-radius: $radius;
+          -ms-border-radius: $radius;
+          border-radius: $radius;
+        }
+
+        //Creation of placeholder box-shadow
+        %box-shadow{
+          -webkit-box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+          -moz-box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+          -o-box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+          -ms-box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+        }
+
+        //Creation of image-replacement that is needed to show an image without a text
+        %image-replacement{
+          text-indent: -9999px;
+          overflow: hidden;
+          background-repeat: no-repeat;
+        }
+
+*/
+
+/*
+
+    Align-itens types:
+
+    stretch:    -   Default. Items are stretched to fit the container 
+    content:    -   Items are positioned at the center of the container 
+    flex-start: -   Items are positioned at the beginning of the container  
+    flex-end    -   Items are positioned at the end of the container  
+    baseline    -   Items are positioned at the baseline of the container 
+    initial     -   Sets this property to its default value. Read about initial 
+    inherit     -   Inherits this property from its parent element. Read about inherit
+
+    Justify-content types:
+
+    flex-start    -   Default value. Items are positioned at the beginning of the container 
+    flex-end      -   Items are positioned at the end of the container  
+    center        -   Items are positioned at the center of the container 
+    space-between -   Items are positioned with space between the lines 
+    space-around  -   Items are positioned with space before, between, and after the lines  
+    initial       -   Sets this property to its default value. Read about initial 
+    inherit       -   Inherits this property from its parent element. Read about inherit
+
+*/
+
+@mixin flexbox($direction: row, $alignment: stretch, $justify: flex-start){
+    display: flex;
+    flex-direction: $direction;
+    align-items: $alignment;
+    justify-content: $justify;
+}

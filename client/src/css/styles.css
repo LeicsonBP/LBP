@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -41,6 +42,71 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/*
+
+	Essentials of variables
+
+		//Declaração de variáveis em SCSS
+		$cor_padrao: darken(#c24e4b,0);
+		$cor_auxiliar: lighten(#1e2c35,0);
+		$cor_branca: #fff;
+		$radius: .3em;
+		$media-query-mobile: "(max-width: 980px)";
+
+*/
+/*
+
+    Essentials of mixins
+
+        //Creation of placeholder border-radius
+        @mixin border-radius($radius: 0.3em){
+          -webkit-border-radius: $radius;
+          -moz-border-radius: $radius;
+          -o-border-radius: $radius;
+          -ms-border-radius: $radius;
+          border-radius: $radius;
+        }
+
+        //Creation of placeholder box-shadow
+        %box-shadow{
+          -webkit-box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+          -moz-box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+          -o-box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+          -ms-box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+        }
+
+        //Creation of image-replacement that is needed to show an image without a text
+        %image-replacement{
+          text-indent: -9999px;
+          overflow: hidden;
+          background-repeat: no-repeat;
+        }
+
+*/
+/*
+
+    Align-itens types:
+
+    stretch:    -   Default. Items are stretched to fit the container 
+    content:    -   Items are positioned at the center of the container 
+    flex-start: -   Items are positioned at the beginning of the container  
+    flex-end    -   Items are positioned at the end of the container  
+    baseline    -   Items are positioned at the baseline of the container 
+    initial     -   Sets this property to its default value. Read about initial 
+    inherit     -   Inherits this property from its parent element. Read about inherit
+
+    Justify-content types:
+
+    flex-start    -   Default value. Items are positioned at the beginning of the container 
+    flex-end      -   Items are positioned at the end of the container  
+    center        -   Items are positioned at the center of the container 
+    space-between -   Items are positioned with space between the lines 
+    space-around  -   Items are positioned with space before, between, and after the lines  
+    initial       -   Sets this property to its default value. Read about initial 
+    inherit       -   Inherits this property from its parent element. Read about inherit
+
+*/
 body {
   font-family: "Roboto",sans-serif; }
 
@@ -60,26 +126,26 @@ body {
   height: 100vh; }
 
 .header-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-image: url("../img/Background.jpg");
   height: 100vh;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
   color: white;
   background-attachment: fixed;
   background-size: cover;
   background-position: 50% 50%; }
 
 .header-principal-title-text {
-  font-family: "Baloo",sans-serif;
+  font-family: "Baloo", sans-serif;
   text-transform: uppercase;
-  font-size: 2em;
-  padding: 0 0.5em 0 0.5em;
+  font-size: 2rem;
+  padding: 0 0.5rem 0 0.5rem;
   border-left: 5px solid white;
   border-right: 5px solid white;
-  margin: 1em 0 1em 0; }
+  margin: 1rem 0 1rem 0; }
 
 /*
 
@@ -98,26 +164,26 @@ body {
   text-align: center; }
 
 .header-links-list-itemList:nth-child(1) {
-  padding-top: 2em; }
+  padding-top: 2rem; }
 
 .header-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: auto;
   width: 100%;
-  display: flex;
   position: fixed;
-  flex-direction: column;
   z-index: 10;
   top: 0;
-  background-color: rgba(14, 14, 14, 0.9);
-  justify-content: center; }
+  background-color: rgba(14, 14, 14, 0.9); }
 
 .header-links-linksToggle {
   background-image: url("../img/Icons/Arrow.svg");
-  width: 1em;
-  height: 1em;
+  width: 1rem;
+  height: 1rem;
   background-size: 100%;
   align-self: center;
-  margin: 1em 0 1em 0;
+  margin: 1rem 0 1rem 0;
   transition: 0.5s ease-in-out; }
 
 .header-links:hover {
@@ -166,5 +232,69 @@ body {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   margin: 0 2em 0 1em; }
+
+.main-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%; }
+
+/*
+
+	Profile Details
+
+*/
+.main-profile-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  width: calc(100% - 4rem);
+  order: 2; }
+
+/*
+
+	Profile Details Picture
+
+*/
+.main-profile-details-picture {
+  width: 45%; }
+
+.main-profile-details-picture-img {
+  width: 100%;
+  border-radius: 50%; }
+
+/*
+
+	Profile Details Skills
+
+*/
+.main-profile-details-skills {
+  width: 45%;
+  text-align: center; }
+
+.main-profile-details-skills-title {
+  margin: 0 1rem 1rem 1rem; }
+
+/*
+
+	Profile Description
+
+*/
+.main-profile-description {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  order: 1; }
+
+.main-profile-description-title {
+  align-self: center;
+  margin: 2rem; }
+
+.main-profile-description-text {
+  text-align: center;
+  margin: 0 2rem 2rem 2rem; }
 
 /*# sourceMappingURL=styles.css.map */

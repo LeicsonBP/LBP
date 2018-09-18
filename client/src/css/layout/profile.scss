@@ -1,0 +1,70 @@
+.main-profile{
+	@include flexbox(column);
+	width: 100%;
+}
+
+/*
+
+	Profile Details
+
+*/
+
+.main-profile-details{
+	@include flexbox(null,center,space-between);
+	padding: 2rem;
+	width: calc(100% - 4rem);
+	order: 2;
+}
+
+/*
+
+	Profile Details Picture
+
+*/
+
+
+.main-profile-details-picture{
+	width: 45%;
+}
+
+.main-profile-details-picture-img{
+	width: 100%;
+	border-radius: 50%;
+}
+
+/*
+
+	Profile Details Skills
+
+*/
+
+
+.main-profile-details-skills{
+	width: 45%;
+	text-align: center;
+}
+
+.main-profile-details-skills-title{
+	margin: 0 1rem 1rem 1rem;
+}
+
+/*
+
+	Profile Description
+
+*/
+
+.main-profile-description{
+	@include flexbox(column);
+	order: 1;
+}
+
+.main-profile-description-title{
+	align-self: center;
+	margin: 2rem;
+}
+
+.main-profile-description-text{
+	text-align: center;
+	margin: 0 2rem 2rem 2rem;
+}

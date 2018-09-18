@@ -10,13 +10,10 @@
 }
 
 .header-principal{
+	@include flexbox(column,center,center);
 	background-image: url("../img/Background.jpg");
 	height: 100vh;
 	width: 100%;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	align-items: center;
 	color: white;
 	background-attachment: fixed;
 	background-size: cover;
@@ -24,11 +21,11 @@
 }
 
 .header-principal-title-text{
-	font-family: "Baloo",sans-serif;
+	font-family: $font-title;
 	text-transform: uppercase;
-	font-size: 2em;
-	padding: 0 0.5em 0 0.5em;
+	font-size: 2rem;
+	padding: 0 0.5rem 0 0.5rem;
 	border-left: 5px solid white;
 	border-right: 5px solid white;
-	margin: 1em 0 1em 0;
+	margin: 1rem 0 1rem 0;
 }
